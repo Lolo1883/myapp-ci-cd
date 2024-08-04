@@ -7,7 +7,6 @@ pipeline {
 	}
 
 	tools {
-		jdk "${jdkHome}"
 		maven "${mavenHome}"
 	}
 
