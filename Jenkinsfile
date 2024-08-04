@@ -7,7 +7,7 @@ pipeline {
 	}
 
 	tools {
-		jdk "${JAVA_VERSION}"
+		jdk "${jdkHome}"
 		maven "${mavenHome}"
 	}
 
