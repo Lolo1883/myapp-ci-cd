@@ -13,6 +13,8 @@ pipeline {
 	stages {
 		stage('Build'){
 			steps {
+			    sh "env | grep -e PATH -e JAVA_HOME"
+			    echo "which java"
 			    sh "mvn clean install -DskipTests"
 			}
 		}
