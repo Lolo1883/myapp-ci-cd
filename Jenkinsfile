@@ -7,7 +7,7 @@ pipeline {
 	}
 
 	tools {
-		maven "${mavenHome}"
+		maven 'maven-jenkins'
 	}
 
 	stages {
