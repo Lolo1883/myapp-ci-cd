@@ -13,10 +13,7 @@ pipeline {
 	stages {
 		stage('Build'){
 			steps {
-			    git url: 'https://github.com/Lolo1883/myapp-ci-cd'
-                 withMaven {
-                   sh "mvn clean verify"
-                 }
+			   sh "mvn clean install"
 			}
 		}
 
