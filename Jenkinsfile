@@ -13,9 +13,10 @@ pipeline {
 	stages {
 		stage('Build'){
 			steps {
-			    sh "env | grep -e PATH -e JAVA_HOME"
-			    echo "which java"
-			    sh "mvn clean install -DskipTests"
+			    git url: 'https://github.com/cyrille-leclerc/multi-module-maven-project'
+                 withMaven {
+                   sh "mvn clean verify"
+                 }
 			}
 		}
 
