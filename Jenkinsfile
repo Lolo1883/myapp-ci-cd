@@ -25,7 +25,8 @@ pipeline {
 
 		stage('Deploy') {
 			steps {
-			    sh "mvn jar:jar deploy:deploy"
+			    sh "mvn docker:build"
+			    sh "mvn docker:push"
 			}
 		}
 	}
